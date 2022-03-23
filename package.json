@@ -1,0 +1,24 @@
+{
+  "name": "smart-diz1",
+  "version": "1.0.0",
+  "description": "smart bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiZiNnEs/smart-diz1.git"
+  },
+  "author": "DiZiNnEs <dizinnes228@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DiZiNnEs/smart-diz1/issues"
+  },
+  "homepage": "https://github.com/DiZiNnEs/smart-diz1#readme",
+  "dependencies": {
+    "@nlpjs/basic": "^4.23.3",
+    "node-nlp": "^4.23.2"
+  }
+}
