@@ -1,12 +1,10 @@
-import Telegraf from 'telegraf'
+import * as tg from 'telegraf'
 
-const bot = new Telegraf(process.env.BOT_TOKEN)
-bot.start((ctx: { reply: (arg0: string) => any }) => ctx.reply('Welcome'))
-bot.help((ctx: { reply: (arg0: string) => any }) => ctx.reply('Send me a sticker'))
-bot.on('sticker', (ctx: { reply: (arg0: string) => any }) => ctx.reply('👍'))
-bot.hears('hi', (ctx: { reply: (arg0: string) => any }) => ctx.reply('Hey there'))
-bot.launch()
+export const telegramBot = new tg.Telegraf('5316086155:AAEvkRpuLaLF-WDYRtmAdhyXOrMssJO_P8Y')
+telegramBot.start((ctx: { reply: (arg0: string) => any }) => ctx.reply('Добро пожаловать, я бот'))
+telegramBot.help((ctx: { reply: (arg0: string) => any }) => ctx.reply('Просто поговори со мной'))
+telegramBot.on('text', async (ctx: any) => ctx.reply(ctx.update.message.text))
 
 // Enable graceful stop
-process.once('SIGINT', () => bot.stop('SIGINT'))
-process.once('SIGTERM', () => bot.stop('SIGTERM'))
+process.once('SIGINT', () => telegramBot.stop('SIGINT'))
+process.once('SIGTERM', () => telegramBot.stop('SIGTERM'))
