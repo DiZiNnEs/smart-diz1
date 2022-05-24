@@ -6,7 +6,8 @@
       ]
     }
   },
+  "api-server": { "port": 3001, "serveBot": true },
   "use": [
-    "Basic"
+    "Basic", "LangEs", "ConsoleConnector", "ExpressApiServer", "DirectlineConnector"
   ]
 }
